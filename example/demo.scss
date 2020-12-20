@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+};
+
+.custom-ui {
+  width: 500px;
+  border-radius: 10px;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 10px;
+  background: linear-gradient(315deg, #033185, #032970);
+  box-shadow: -20px -20px 60px #032769, 20px 20px 60px #03358f;
+  color: #fff;
+  button {
+    padding: 8px 36px;
+    outline: none;
+    border-radius: 8px;
+    border: none;
+    margin-right: 8px;
+    &:hover {
+      box-shadow: 0px 0px 0px #bdbdbd, 0px 0px 0px #ffffff, inset 4px 4px 8px #bdbdbd, inset -4px -4px 8px #ffffff;
+    }
+  }
+}
+
+.my-custom-ui-container {
+  .react-confirm-pro__overlay {
+    background: linear-gradient(315deg, #033185, #032970);
+  }
+}
+.custom-buttons {
+  text-align: center;
+  button {
+    padding: 8px 36px;
+    outline: none;
+    border-radius: 8px;
+    border: none;
+    margin-right: 8px;
+    &:hover {
+      box-shadow: 0px 0px 0px #bdbdbd, 0px 0px 0px #ffffff, inset 4px 4px 8px #bdbdbd, inset -4px -4px 8px #ffffff;
+    }
+  }
+}
+
+.react-confirm-pro__preview {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 45px;
+  .react-confirm-pro__actions {
+    button {
+      padding: 12px 36px;
+      outline: none;
+      border-radius: 8px;
+      border: none;
+      margin-right: 8px;
+      box-shadow: 4px 4px 8px #bdbdbd, -4px -4px 8px #ffffff, inset 0px 0px 0px #bdbdbd, inset 0px 0px 0px #ffffff;
+      transition: all 0.1s linear;
+      &:hover {
+        box-shadow: 0px 0px 0px #bdbdbd, 0px 0px 0px #ffffff, inset 4px 4px 8px #bdbdbd, inset -4px -4px 8px #ffffff;
+      }
+    }
+  }
+}

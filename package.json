@@ -1,6 +1,6 @@
 {
   "name": "react-confirm-pro",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "dialog callable component",
   "repository": {
     "type": "git",
@@ -12,14 +12,15 @@
     "react alert",
     "redux confirm dialog",
     "confirm alert react js",
-    "react-confirm-alert",
     "react-confirm",
     "react-dialog",
     "confirm-dialog",
     "react-confirm-pro",
     "confirm",
     "dialog",
-    "react"
+    "react",
+    "alert",
+    "js alert"
   ],
   "author": "Vasyl Putra (vasylputra@gmail.com)",
   "license": "MIT",
@@ -27,47 +28,81 @@
     "url": "https://github.com/Puvvl/react-confirm-pro/issues"
   },
   "homepage": "https://github.com/Puvvl/react-confirm-pro#readme",
-  "typings": "./index.d.ts",
-  "main": "app.js",
-  "engines": {
-    "node": ">= 8.0.0"
-  },
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.11.6",
-    "@testing-library/react": "^11.2.1",
-    "@testing-library/user-event": "^12.2.2",
-    "@types/jest": "^26.0.15",
-    "@types/node": "^12.19.5",
-    "@types/react": "^16.9.56",
-    "@types/react-dom": "^16.9.9",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-scripts": "4.0.0",
-    "typescript": "^4.0.5",
-    "web-vitals": "^0.2.4"
-  },
+  "main": "lib/index.tsx",
+  "typings": "src/react-confirm-pro.d.ts",
+  "files": [
+    "src",
+    "src/CloseIcon.tsx",
+    "src/index.tsx",
+    "src/react-confirm-pro.scss"
+  ],
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --hot --inline",
+    "lint": "eslint ./src",
+    "clean": "rimraf lib",
+    "build": "npm run clean && cross-env NODE_ENV=production babel src --out-dir lib && npm run build:demo",
+    "build:demo": "cross-env NODE_ENV=production webpack --config webpack.config.production.js",
+    "prepublish": "npm run build"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "peerDependencies": {
+    "@types/classnames": "^2.2.11",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "animate.css": "^4.1.1",
+    "classnames": "^2.2.6",
+    "react": ">=16.0.0",
+    "react-dom": ">=16.0.0"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "devDependencies": {
+    "@babel/cli": "^7.12.8",
+    "@babel/core": "^7.12.9",
+    "@babel/plugin-proposal-decorators": "^7.12.1",
+    "@babel/preset-env": "^7.12.7",
+    "@babel/preset-react": "^7.12.7",
+    "@types/classnames": "^2.2.11",
+    "@types/jest": "^26.0.16",
+    "@types/node": "^14.14.10",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.9.0",
+    "@typescript-eslint/parser": "^4.9.0",
+    "animate.css": "^4.1.1",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-cli": "^6.26.0",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.1.2",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-minify": "^0.5.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "chai": "^4.1.2",
+    "classnames": "^2.2.6",
+    "cross-env": "^5.2.0",
+    "css-loader": "^5.0.1",
+    "eslint": "^4.5.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-config-standard-react": "^5.0.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-react": "^7.3.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "mocha": "^3.5.0",
+    "node-sass": "^4.14.1",
+    "prop-types": "^15.6.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-hot-loader": "^4.3.3",
+    "rimraf": "^2.6.1",
+    "sass-loader": "^10.1.0",
+    "source-map-loader": "^1.1.3",
+    "style-loader": "^2.0.0",
+    "typescript": "^4.1.2",
+    "url-loader": "^0.5.9",
+    "webpack": "^5.10.0",
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^2.7.1"
   }
 }
