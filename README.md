@@ -19,7 +19,7 @@ $ yarn add react-confirm-alert
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | duration            | number                                                                                                                                                                               | 0\.4                                                                                       | Animation duration\.                                                                                                                                                           |
 | delay               | number                                                                                                                                                                               | 0\.2                                                                                       | Animation body delay                                                                                                                                                           |
-| animate             | \{<div style="margin\-left: 15px">in?: <a href="https://animate.style/" target="\_blank">string</a>;<br/>out?: <a href="https://animate.style/" target="\_blank">string</a>;</div>\} | \{<div style="margin\-left: 15px">in: "animate_fadeIn",<br/>out: "animate_fadeOut"</div>\} | For using custom in/out animation read the guide on <a href="https://animate.style/" target="\_blank">Animate\.css</a><br />in: on Enter animation<br/>out: on Leave animation |
+| animate             | \{<div style="margin\-left: 15px">in?: <a href="https://animate.style/" target="_blank">string</a>;<br/>out?: <a href="https://animate.style/" target="_blank">string</a>;</div>\} | \{<div style="margin\-left: 15px">in: "animate_fadeIn",<br/>out: "animate_fadeOut"</div>\} | For using custom in/out animation read the guide on <a href="https://animate.style/" target="_blank">Animate\.css</a><br />in: on Enter animation<br/>out: on Leave animation |
 | className           | string                                                                                                                                                                               | \-                                                                                         | Container className                                                                                                                                                            |
 | onClickOutside      | \(\) => void                                                                                                                                                                         | \-                                                                                         | Outside handler                                                                                                                                                                |
 | closeOnClickOutside | boolean                                                                                                                                                                              | true                                                                                       | Outside check                                                                                                                                                                  |
@@ -37,8 +37,10 @@ $ yarn add react-confirm-alert
 | btnSubmit           | string                                                                                                                                                                               | Submit                                                                                     | Submit button label                                                                                                                                                            |
 
 #### Code examples
+
 [Other examples](https://github.com/Puvvl/react-confirm-pro/tree/main/example)
-#####Default example
+
+**Default example:**
 ```javascript
 import React from 'react';
 import ReactDOM from 'react-dom'
@@ -72,7 +74,8 @@ const rootEl = document.getElementById('root')
 ReactDOM.render(<ReactConfirmProDemo />, rootEl)
 ```
 
-#####Custom UI
+**Custom UI:**
+
 ```javascript
 import React from 'react';
 import ReactDOM from 'react-dom'
