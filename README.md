@@ -6,13 +6,13 @@ Dialog callable component for React [Live demo](https://puvvl.github.io/react-co
 #### Install with NPM:
 
 ```
-$ npm install react-confirm-alert --save
+$ npm install react-confirm-pro --save
 ```
 
 #### Install with Yarn:
 
 ```
-$ yarn add react-confirm-alert
+$ yarn add react-confirm-pro
 ```
 #### Options
 | Attribute           | Type                                                                                                                                                                                 | Default                                                                                    | Description                                                                                                                                                                    |
