@@ -1,5 +1,5 @@
 # react-confirm-pro
-Dialog callable component for React [Live demo](https://puvvl.github.io/react-confirm-pro/demo/)|[Examples](#h4-code-examples)
+Dialog callable component for React [Live demo](https://puvvl.github.io/react-confirm-pro/demo/)|[Examples](#user-content-code-examples)
 
 ## Getting started
 
