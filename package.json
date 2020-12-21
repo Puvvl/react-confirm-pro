@@ -1,6 +1,6 @@
 {
   "name": "react-confirm-pro",
-  "version": "1.0.2",
+  "version": "1.0.6",
   "description": "dialog callable component",
   "repository": {
     "type": "git",
@@ -28,13 +28,11 @@
     "url": "https://github.com/Puvvl/react-confirm-pro/issues"
   },
   "homepage": "https://github.com/Puvvl/react-confirm-pro#readme",
-  "main": "lib/index.tsx",
+  "main": "lib/react-confirm-pro.js",
   "typings": "src/react-confirm-pro.d.ts",
   "files": [
-    "src",
-    "src/CloseIcon.tsx",
-    "src/index.tsx",
-    "src/react-confirm-pro.scss"
+    "src/react-confirm-pro.d.ts",
+    "lib/**/*"
   ],
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --hot --inline",
@@ -42,7 +40,8 @@
     "clean": "rimraf lib",
     "build": "npm run clean && cross-env NODE_ENV=production babel src --out-dir lib && npm run build:demo",
     "build:demo": "cross-env NODE_ENV=production webpack --config webpack.config.production.js",
-    "prepublish": "npm run build"
+    "build:prod": "npm run clean && cross-env NODE_ENV=production babel src --out-dir lib && cross-env NODE_ENV=production webpack --config webpack.config.js",
+    "prepublish": "npm run build:prod"
   },
   "peerDependencies": {
     "@types/classnames": "^2.2.11",
@@ -79,6 +78,7 @@
     "babel-preset-stage-0": "^6.24.1",
     "chai": "^4.1.2",
     "classnames": "^2.2.6",
+    "clean-webpack-plugin": "^3.0.0",
     "cross-env": "^5.2.0",
     "css-loader": "^5.0.1",
     "eslint": "^4.5.0",

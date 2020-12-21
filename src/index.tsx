@@ -89,7 +89,9 @@ const Modal = ({
     };
   }, [visible])
 
-  const containerClassName = classNames("react-confirm-pro", `react-confirm-pro__${type}`, className)
+  const checkedType = type !== "light" ? type !== "dark" ? "light" : type : type;
+
+  const containerClassName = classNames("react-confirm-pro", `react-confirm-pro__${checkedType}`, className)
 
   const animateClassName = classNames({
     [`${animate.in}`]: visible,

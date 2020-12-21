@@ -1,6 +1,8 @@
 # react-confirm-pro
 Dialog callable component for React [Live demo](https://puvvl.github.io/react-confirm-pro/index.html)|[Examples](#user-content-code-examples)
 
+[![npm version](https://badge.fury.io/js/react-confirm-pro.svg)](https://badge.fury.io/js/react-confirm-pro)
+
 ## Getting started
 
 #### Install with NPM:

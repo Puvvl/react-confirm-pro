@@ -1,11 +1,5 @@
 .DS_Store
 /node_modules
 yarn.lock
-package-lock.json
 yarn-error.log
 debug.log
-.vscode
-.local
-webpack.config.js
-/demo
-/configs
