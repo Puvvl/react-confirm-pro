@@ -3,7 +3,7 @@ before_script:
   - npm install -g npm-ci
   - npm install
 node_js:
-- "12"
+  - "12"
 script:
   - npm run build
   - npm run build:prod
