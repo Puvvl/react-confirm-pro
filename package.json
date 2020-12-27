@@ -1,6 +1,6 @@
 {
   "name": "react-confirm-pro",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "dialog callable component",
   "repository": {
     "type": "git",
@@ -28,7 +28,7 @@
     "url": "https://github.com/Puvvl/react-confirm-pro/issues"
   },
   "homepage": "https://github.com/Puvvl/react-confirm-pro#readme",
-  "main": "lib/react-confirm-pro.js",
+  "main": "lib/index.js",
   "typings": "src/react-confirm-pro.d.ts",
   "files": [
     "src/react-confirm-pro.d.ts",

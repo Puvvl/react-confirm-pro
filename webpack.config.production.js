@@ -8,7 +8,7 @@ module.exports = {
   entry: [ './src/index.tsx' ],
   output: {
     path: path.resolve(__dirname, './lib'),
-    filename: 'react-confirm-pro.js',
+    filename: 'index.js',
     library: 'ReactConfirmPro',
     libraryTarget: 'umd',
     globalObject: 'this',
