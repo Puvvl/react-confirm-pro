@@ -4,9 +4,10 @@ cache:
   directories:
   - node_modules
 node_js:
-  - "6"
-  - "5"
-  - "4"
+  - "15"
+  - "14"
+  - "13"
+  - "12"
 script:
   - npm run build
   - npm run build:prod
