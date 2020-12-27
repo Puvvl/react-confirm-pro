@@ -22,7 +22,7 @@ const Modal = ({
     submit: false
   },
   customUI,
-  children,
+  body,
   buttons,
   title,
   description,
@@ -138,7 +138,7 @@ const Modal = ({
               <CloseIcon />
             </button>
           )}
-          {children || (
+          {body || (
             <div>
               {title}
               {description}

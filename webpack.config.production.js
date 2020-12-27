@@ -1,31 +1,18 @@
-var config = require('./configs')
-var path = require('path')
-var webpack = require('webpack')
+const config = require('./configs')
+const path = require('path')
+const webpack = require('webpack')
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
 module.exports = {
-  entry: './example/index.js',
+  mode: 'production',
+  entry: [ './src/index.tsx' ],
   output: {
-    path: path.join(__dirname, 'demo'),
-    filename: 'bundle.js'
-  },
-  devServer: {
-    inline: false,
-  },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify('production')
-      }
-    }),
-    new webpack.ProvidePlugin({
-      React: 'react',
-      _: 'lodash'
-    }),
-    new webpack.NoEmitOnErrorsPlugin()
-  ],
-  resolve: {
-    extensions: ['.js', '.jsx', '.ts', '.tsx'],
+    path: path.resolve(__dirname, './lib'),
+    filename: 'react-confirm-pro.js',
+    library: 'ReactConfirmPro',
+    libraryTarget: 'umd',
+    globalObject: 'this',
+    umdNamedDefine: true,
   },
   module: {
     rules: [
@@ -42,23 +29,49 @@ module.exports = {
         include: __dirname
       },
       {
-        test: /\.css$/,
-        use: ['style-loader', { loader: 'css-loader', options: { importLoaders: 1 } }],
-      },
-      {
-        test: /\.(scss|sass)$/,
+        test:/\.(css|scss|sass)$/,
         use: [
           'style-loader',
-          'css-loader',
-          'sass-loader',
+          { loader: 'css-loader', options: { importLoaders: 1 } },
+          'sass-loader'
         ],
-      }
+      },
     ]
   },
   resolve: {
     alias: {
       [config.name]: path.join(__dirname, 'src')
     },
-    extensions: [".ts", ".tsx", ".js", ".jsx"]
-  }
+    extensions: [ '.ts', '.tsx', ".js" ]
+  },
+  target: 'node',
+  externals: [{
+    'react': 'react',
+    'react-dom': 'react-dom',
+    "classNames": "classnames"
+  }],
+  optimization: {
+    minimizer: [
+      new UglifyJsPlugin({
+        uglifyOptions: {
+          cache: true,
+          parallel: true,
+          sourceMap: true,
+          output: {
+            comments: false
+          },
+          compress: {
+            booleans: true,
+          }
+        }
+      })
+    ],
+  },
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify('production')
+      }
+    }),
+  ],
 }
