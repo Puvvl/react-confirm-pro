@@ -5,6 +5,6 @@
 
 version: 2
   - package-ecosystem: npm
-    directory: "/"
+    directory: ""
     schedule:
       interval: weekly
